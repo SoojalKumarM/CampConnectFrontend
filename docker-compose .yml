@@ -1,0 +1,12 @@
+# Builds the React app and serves it with nginx on http://localhost:3000
+# Needs the backend running (see the backend repo). Values come from a local .env file.
+services:
+  web:
+    build:
+      context: .
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:8080/api}
+        VITE_GOOGLE_CLIENT_ID: ${VITE_GOOGLE_CLIENT_ID:-}
+    container_name: campus-connect-web
+    restart: unless-stopped
+    ports: ["3000:80"]

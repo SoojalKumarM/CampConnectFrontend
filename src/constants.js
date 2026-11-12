@@ -29,3 +29,6 @@ export const COUNTRY_CODES = [
 ];
 
 export const REPORT_REASONS = ['Fake profile or impersonation', 'Harassment or abusive behaviour', 'Inappropriate photos or content', 'Spam or scam', 'Underage user', 'Other'];
+
+// Rename the product here. (Backend emails use the BRAND_NAME environment variable.)
+export const BRAND = { name: 'Quadly', stem: 'Quad', accent: 'ly', tagline: 'Meet your people on campus.' };
